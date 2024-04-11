@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import url("font/noto-sans-kr-v13-latin_korean-500.woff2");
+@import url("font/noto-sans-kr-v13-latin_korean-700.woff2");
+@import url("font/noto-sans-kr-v13-latin_korean-regular.woff2");
+@import url("font/Roboto-Bold-webfont.woff");
+@import url("font/Roboto-Medium-webfont.woff");
+@import url("font/Roboto-Regular-webfont.woff");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #000;
+  height: 3000px;
+}
+/* 공통요소 */
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+.wrap > section {
+  padding: 80px 0;
+}
+.wrap {
+  position: relative;
+  display: block;
+  padding-top: 128px;
+  transition: padding-top 0.2s;
+}
