@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.sale {
+  position: relative;
+  display: block;
+  background-color: #f8f9ff;
+}
+
+.sale .slide-control {
+  margin-top: 100px;
+}
+
+/* 추천 물품 */
+.recommend {
+  position: relative;
+  display: block;
+  background-color: #fff8fa;
+}
+
+.section-title-txt {
+  font-size: 17px;
+  border-bottom: 2px solid #76bd42;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.blue {
+  color: #76bd42;
+}

@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+.visual {
+  position: relative;
+  display: block;
+  height: 410px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.visual-slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.visual-slide-page {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.visual-slide-page a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.visual-slide-page a img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+}
+.visual-prev .visual-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  border: 0;
+  z-index: 99;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.visual-prev {
+  background: rgba(0, 0, 0, 0) url("../images/visualArrP.png") no-repeat;
+  background-position: 0px -64px;
+  left: calc(50% - 620px);
+}
+
+.visual-prev:hover {
+  background: rgba(0, 0, 0, 0.1) url("../images/visualArrP.png") no-repeat;
+  background-position: 0px 0px;
+}
+
+.visual-next {
+  right: calc(50% - 620px);
+  background: rgba(0, 0, 0, 0) url("../images/visualArrN.png") no-repeat;
+  background-position: 0px -64px;
+}
+
+.visual-next:hover {
+  background: rgba(0, 0, 0, 0.1) url("../images/visualArrN.png") no-repeat;
+  background-position: 0px 0px;
+}
+
+/* 비주얼 컨트롤러 */
+.visual-control {
+  position: absolute;
+  bottom: 43px;
+  z-index: 9;
+  left: calc(50% - 600px + 80px);
+  display: block;
+}
+
+.visual-play {
+  width: 30px;
+  height: 30px;
+  background: url("../images/visualPlay.png") no-repeat;
+  border: none;
+  background-position: 0 0;
+  cursor: pointer;
+  float: left;
+}
+
+.visual-play.active {
+  background-position: 0 -30px;
+}
+
+.visual-pg {
+  position: relative;
+  display: block;
+  width: 52px;
+  height: 30px;
+  background: url("../images/visualNum.png") no-repeat;
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 5px;
+  float: left;
+  bottom: 0;
+  letter-spacing: -1.5px;
+}
+
+.visual-more {
+  position: relative;
+  display: block;
+  width: 29px;
+  height: 30px;
+  background: url("../images/visualMore.png") no-repeat;
+  cursor: pointer;
+  border: 0;
+  margin-left: 4px;
+  float: left;
+}
