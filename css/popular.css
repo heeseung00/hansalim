@@ -1,0 +1,126 @@
+@charset "utf-8";
+.popular {
+    position: relative;
+    display: block;
+}
+.popular-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 34px;
+    padding: 0 20px;
+    border: 1px solid #bbb;
+    line-height: 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+.popular-more:hover{
+    background-color: #f9f9f9;
+}
+
+.popular-cate{
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.popular-slide-prev,
+.popular-slide-next{
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 140px;
+    background-color: #fff;
+}
+
+.popular-slide-prev{
+    float: left;
+}
+
+.popular-slide-prev span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 20px;
+    background: url("../images/swiperArrP.png") no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.popular-slide-prev span:hover{
+    background-position: 0px -20px;
+}
+
+.popular-slide-next{
+    float: right;
+}
+
+.popular-slide-next span{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 20px;
+    background: url("../images/swiperArrN.png") no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.popular-slide-next span:hover{
+    background-position: 0px -20px;
+}
+
+.popular-slide {
+    position: relative;
+    display: block;
+    width: calc(100% - 80px - 80px);
+    height: 140px;
+    float: left;
+}
+
+.popular-slide a {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0); 
+    /* 안보이는 선을 주어 호버시 박스가 움직이는 것을 방지. */
+    transition: all 0.2s;
+}
+
+.popular-slide a:hover{
+    background-color: #fff;
+    border: 2px solid #76bd42;
+}
+
+.popular-slide a:active{
+    background-color: #fff;
+    border: 2px solid #76bd42;
+}
+
+.popular-cate-icon {
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 64px;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+.popular-cate-name {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}

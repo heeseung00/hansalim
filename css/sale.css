@@ -1,29 +1,121 @@
 @charset "utf-8";
-
-.sale {
-  position: relative;
-  display: block;
-  background-color: #f8f9ff;
+/* 알뜰상품  */
+.sale{
+    position: relative;
+    display: block;
+    background-color: #f8f9ff;
+}
+.sale .slide-control{
+    margin-top: 100px;
 }
 
-.sale .slide-control {
-  margin-top: 100px;
+/* 신상물품 */
+.new{
+    position: relative;
+    display: block;
+
+}
+.new .section-bt{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.new-wrap{
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 50px;
 }
 
+.new-left{
+    position: relative;
+    display: block;
+    width: calc(50% - 8px);
+    float: left;
+}
+.new-img{
+    position: relative;
+    display: block;
+    height: 370px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.new-title{
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.new-txt{
+    position: relative;
+    display: block;
+    font-size: 17px;
+}
+
+.new-right{
+    position: relative;
+    display: block;
+    width: calc(50% - 8px);
+    float: right;
+}
+.new-box{
+    position: relative;
+    display: block;
+    width: calc(50% - 8px);
+}
+.new-box-img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.new-box-img img{
+    width: 102%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.new-box-title{
+    position: relative;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    /* 말줄임 ... 처리 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+/* 홀수는 왼쪽 */
+.new-right .new-box:nth-child(2n+1){
+    float: left;
+}
+/* 짝수는 오른쪽 */
+.new-right .new-box:nth-child(2n){
+    float:right;
+}
 /* 추천 물품 */
-.recommend {
-  position: relative;
-  display: block;
-  background-color: #fff8fa;
+.recommend{
+    position: relative;
+    display: block;
+    background-color: #fff8fa;
 }
 
-.section-title-txt {
-  font-size: 17px;
-  border-bottom: 2px solid #76bd42;
-  display: inline-block;
-  margin-bottom: 30px;
+.section-title-txt{
+    font-size: 17px;
+    border-bottom: 2px solid #76bd42;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
-.blue {
-  color: #76bd42;
+.blue{
+    color: #76bd42;
 }

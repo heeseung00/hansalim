@@ -88,38 +88,32 @@ window.addEventListener("load", function () {
   listToggle(centerBt, centerList);
   // toggleListArr[2] = centerList
   // ====================================================
-  // 전체메뉴 펼침 기능
-  const allMenuArea = this.document.querySelector(".all-menu-area");
-  const allMenu = this.document.querySelector(".all-menu");
-  const cateList = this.document.querySelector(".cate-list");
-  // ul인 cate-list로 선언하니 스크롤 부분에 커서 올리면 메뉴 사라짐
-  const cateListWrap = this.document.querySelector(".all-menu-cate-wrap");
+  // 전체 메뉴 펼침 기능
+  const allMenuArea = document.querySelector(".all-menu-area");
+  const allMenu = document.querySelector(".all-menu");
+  const cateList = document.querySelector(".cate-list");
+  // ul인 cate-list로 선언하니 스크롤 부분에 커서올리면 메뉴 사라짐.
+  const cateListWrap = document.querySelector(".all-menu-cate-wrap");
   const deliList = this.document.querySelector(".deli-list");
   const themeList = this.document.querySelector(".theme-list");
   let isMenuOpen = false;
-
   cateList.addEventListener("mouseleave", function () {
     if (!isMenuOpen) {
-      allMenu.classList.remove("active"); //기능되기 전 가림
+      allMenu.classList.remove("active"); // 기능되기 전 가림.
     }
   });
-
   cateList.addEventListener("mouseenter", function () {
     allMenu.classList.add("active");
   });
-
-  deliList.addEventListener("mouseleave", function () {
-    allMenu.classList.remove("active"); //기능되기 전 가림
-  });
-
-  themeList.addEventListener("mouseleave", function () {
-    allMenu.classList.remove("active"); //기능되기 전 가림
-  });
-
   cateListWrap.addEventListener("mouseenter", function () {
     allMenu.classList.add("active");
   });
-
+  deliList.addEventListener("mouseenter", function () {
+    allMenu.classList.remove("active");
+  });
+  themeList.addEventListener("mouseenter", function () {
+    allMenu.classList.remove("active");
+  });
   // 서브 카테고리 보여주기 기능
   const cateLists = this.document.querySelectorAll(".cate-list > li");
   const cateDepth2 = this.document.querySelectorAll(".cate-depth2-list");
@@ -135,8 +129,6 @@ window.addEventListener("load", function () {
       });
     });
   });
-
- 
 
   // =88888888888888888888888888888888888
 });

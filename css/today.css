@@ -1,41 +1,92 @@
 @charset "utf-8";
-
-.today {
-  position: relative;
-  display: block;
+/* 오늘의 상품 */
+.today{
+    position: relative;
+    display: block;
 }
+.good-wrap{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
-.good-wrap {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
 }
-
-.good-box {
-  position: relative;
-  display: block;
-  width: 290px;
-  height: 410px;
-  background-color: #fff;
+.good-box{
+    position: relative;
+    display: block;
+    width: 290px;
+    height: 410px;
+    background-color: #fff; 
 }
-
-.good-img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 290px;
-  overflow: hidden;
+.good-img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 290px;
+    overflow: hidden; 
 }
-
-.good-img > img {
-  width: 100%;
+.good-img > img{
+    width: 100%;
+transition:all 0.5s ;
 }
-
-.good-img:hover > img {
-  transform: scale(1.1);
-}
-
-.good-info{
+.good-img:hover > img{
+   transform: scale(1.1);
     
+}
+.good-type{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #76bd42;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.good-info{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    padding-left: 0;
+    font-size: 17px;
+    color: #000;
+}
+
+.good-info em{
+    font-style: normal;
+}
+
+.good-info-price{
+    position: relative;
+    display: block;
+    width: 100%;
+    /* padding: 0 15px; */
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+}
+
+.good-info-price em{
+    font-size: 17px;
+    font-style: normal;
+}
+
+.good-add-cart{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url("../images/btnCartList.png") no-repeat;
+    background-position: 0 0;
+    border: 0;
+    cursor: pointer;
+    bottom: 30px;
+    right: 20px;
+}
+.no-mb{
+    margin-bottom: 0;
 }
