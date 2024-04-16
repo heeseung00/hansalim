@@ -885,5 +885,105 @@
         "link": "#"
       }
     ]
-  }
+  },
+  "brandarr": [
+    {
+      "name": "참여인증",
+      "title1": "참여공동체",
+      "value1": "51곳",
+      "title2": "재배면적",
+      "value2": "9,441,668㎡",
+      "pic": "brand_1.png",
+      "id": "브랜드1",
+      "link": "#"
+    },
+    {
+      "name": "병재사용",
+      "title1": "온실가스",
+      "value1": "105.1톤↓",
+      "title2": "소나무",
+      "value2": "8,866그루↑",
+      "pic": "brand_2.png",
+      "id": "브랜드2",
+      "link": "#"
+    },
+    {
+      "name": "토박이씨앗살림",
+      "title1": "생산량",
+      "value1": "253.693kg",
+      "title2": "재배면적",
+      "value2": "72만㎡",
+      "pic": "brand_3.png",
+      "id": "브랜드3",
+      "link": "#"
+    },
+    {
+      "name": "우리보리살림",
+      "title1": "사육두수",
+      "value1": "116,000두",
+      "title2": "보리농지면적",
+      "value2": "800,000㎡",
+      "pic": "brand_4.png",
+      "id": "브랜드4",
+      "link": "#"
+    },
+    {
+      "name": "가까운 먹을거리",
+      "title1": "온실가스",
+      "value1": "1,640톤↓",
+      "title2": "소나무",
+      "value2": "248,561그루↑",
+      "pic": "brand_5.png ",
+      "id": "브랜드5",
+      "link": "#"
+    },
+    {
+      "name": "우리밀 살리기",
+      "title1": "공급량",
+      "value1": "1,436,129kg",
+      "title2": "온실가스",
+      "value2": "5,055톤↓",
+      "pic": "brand_6.png",
+      "id": "브랜드6",
+      "link": "#"
+    }
+  ],
+  "bannerarr": [
+    {
+      "link": "#",
+      "image": "banner_1.jpg",
+      "id": "banner1",
+      "title": "배너1"
+    },
+    {
+      "link": "#",
+      "image": "banner_2.jpg",
+      "id": "banner2",
+      "title": "배너2"
+    },
+    {
+      "link": "#",
+      "image": "banner_3.jpg",
+      "id": "banner3",
+      "title": "배너3"
+    },
+    {
+      "link": "#",
+      "image": "banner_4.jpg",
+      "id": "banner4",
+      "title": "배너4"
+    },
+    {
+      "link": "#",
+      "image": "banner_5.jpg",
+      "id": "banner5",
+      "title": "배너5"
+    },
+    {
+      "link": "#",
+      "image": "banner_6.jpg",
+      "id": "banner6",
+      "title": "배너6"
+    }
+  ]
 }
