@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* 제철요리 */
+.season {
+  position: relative;
+  display: block;
+}
+
+.season-wrap {
+  position: relative;
+  display: block;
+}
+
+.season-left {
+  position: relative;
+  display: block;
+  width: 790px;
+  height: 420px;
+  float: left;
+}
+.season-left a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.season-left a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.season-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  font-size: 0;
+}
+
+.season-info h3 {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #76bd42;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 95px 15px 25px 15px;
+  vertical-align: -10px;
+}
+
+.season-info p {
+  position: absolute;
+  display: inline-block;
+  width: 590px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 30px;
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.season-info p span {
+  position: relative;
+  display: block;
+  font-size: 25px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.season-info p b {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+}
+.season-right {
+  position: relative;
+  display: block;
+  width: calc(100% - 790px - 70px);
+  float: right;
+}
+
+/* smooth scrollbar 적용 */
+.scrollbar-thumb {
+  width: 8px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 4px !important;
+}
+
+.season-good-list::-webkit-scrollbar-track {
+  width: 8px !important;
+  background: transparent !important;
+  border-radius: 4px !important;
+}
+
+.season-good-list::-webkit-scrollbar-thumb {
+  background: rgba(222, 222, 222, 0) !important;
+}
+.season-good-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(85px * 3);
+  overflow: auto;
+}
+.season-list {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.season-list li {
+  position: relative;
+  display: block;
+}
+.season-good {
+  position: relative;
+  display: block;
+  height: 70px;
+  margin-bottom: 15px;
+}
+.season-good-check {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -20000px;
+}
+.season-label {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../images/inpCheck.png") no-repeat;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  background-position: 0px 0px;
+}
+.season-good-img {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-left: 40px;
+  overflow: hidden;
+  float: left;
+}
+.season-good-img > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.season-good-check:checked + .season-label {
+  background-position: 0px -36px;
+}
+
+.season-good-info {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  float: left;
+}
+
+.season-good-title {
+  position: relative;
+  display: block;
+  font-size: 15px;
+}
+
+.season-good-price {
+  position: relative;
+  display: block;
+  font-size: 13px;
+}
+
+.season-good-price em {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.season-total {
+  position: relative;
+  display: block;
+}
+
+.season-good-total {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  font-size: 20px;
+  color: #000;
+  margin: 30px 0;
+}
+
+.season-good-total em {
+  font-style: normal;
+}
+
+.buy-good {
+  position: relative;
+  display: block;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 20px;
+  padding: 18px 0;
+}
+
+.buy-good em {
+  font-style: normal;
+}

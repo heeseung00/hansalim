@@ -985,5 +985,42 @@
       "id": "banner6",
       "title": "배너6"
     }
+  ],
+  "seasongood": [
+    {
+      "id": "season1",
+      "link": "#",
+      "pic": "cook_1.jpg",
+      "title": "유기월앙매실(480ml)",
+      "price": 13700
+    },
+    {
+      "id": "season2",
+      "link": "#",
+      "pic": "cook_2.jpg",
+      "title": "솔뫼찹쌀고추장(450g)",
+      "price": 12600
+    },
+    {
+      "id": "season3",
+      "link": "#",
+      "pic": "cook_3.jpg",
+      "title": "깻잎(30장)",
+      "price": 1500
+    },
+    {
+      "id": "season4",
+      "link": "#",
+      "pic": "cook_4.jpg",
+      "title": "다진마늘/난지형(무:200g)",
+      "price": 5500
+    },
+    {
+      "id": "season5",
+      "link": "#",
+      "pic": "cook_5.jpg",
+      "title": "고운고춧가루(300g/다용도)",
+      "price": 16200
+    }
   ]
 }
