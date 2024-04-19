@@ -51,14 +51,48 @@
     <link rel="stylesheet" href="css/today.css" />
     <link rel="stylesheet" href="css/sale.css" />
     <link rel="stylesheet" href="css/popular.css" />
-    <link rel="stylesheet" href="css/season.css">
-
+    <link rel="stylesheet" href="css/season.css" />
+    <link rel="stylesheet" href="css/review.css" />
+    <link rel="stylesheet" href="css/community.css" />
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
   </head>
   <body>
     <!-- 안내창 -->
-    <!-- 고정메뉴 -->
+   <!-- 고정메뉴 -->
+   <div class="fix-menu">
+    <ul class="fix-list">
+        <li>
+            <a href="#" class="fix-login">
+                <span>로그인</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fix-shop">
+                <span>주문/공급</span>
+            </a>
+        </li>
+        <li>
+            <span>최근 본 물품</span>
+            <a href="#" class="good-recent">
+                <img src="images/recent_good.jpg" alt="" />
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fix-qa">
+                <span>상담/문의</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="fix-talk">
+                <span>살림톡</span>
+            </a>
+        </li>
+    </ul>
+    <button class="fix-top">top</button>
+</div>
     <!-- 기본레이아웃 -->
     <div class="wrap">
       <!--헤더  -->
@@ -648,7 +682,7 @@
         </div>
       </section>
       <!-- 배너 -->
-      <div class="banner">
+      <section class="banner">
         <div class="container">
           <div class="banner-slide" id="data-banner">
             <!-- 외부 배너 데이터 연동 출력 js -->
@@ -656,7 +690,7 @@
           <button class="slide-prev"></button>
           <button class="slide-next"></button>
         </div>
-      </div>
+      </section>
       <!-- 제철요리 -->
       <section class="season">
         <div class="container">
@@ -677,15 +711,14 @@
             <div class="season-right">
               <div class="season-list">
                 <ul class="season-good-list" id="data-season" data-scrollbar>
-                  <!-- 외부 제철요리 데이터 출력 js -->
-                  
+                  <!-- 외부 제철요리 데이터 연동 출력 js -->
                 </ul>
               </div>
               <div class="season-total">
                 <div class="season-good-total">
                   <input type="checkbox" id="chkall" class="season-good-check" />
                   <label for="chkall" class="season-label">라벨</label>
-                  전체선택 <em>5</em>개
+                  전체 선택 <em id="buy-total">5</em>개
                 </div>
                 <a href="#" class="buy-good"> 총 <em id="buy-total-money">49,500</em>원 바구니 담기 </a>
               </div>
@@ -694,8 +727,230 @@
         </div>
       </section>
       <!-- 이용후기 -->
+      <section class="review">
+        <div class="container">
+          <div class="layout-wrap clearfix">
+            <div class="layout-left">
+              <h2 class="section-title section-bar">
+                조합원의 생생한<br />
+                <b>이용후기</b>
+              </h2>
+              <p class="section-title-text">
+                이웃 조합원은 <br />
+                어떤 물품을 구매했을까요?
+              </p>
+              <div class="slide-control">
+                <div class="slide-pg">1/4</div>
+                <button class="slide-prev">이전</button>
+                <button class="slide-next">다음</button>
+              </div>
+            </div>
+            <div class="layout-right">
+              <!-- 이용후기 슬라이드 -->
+              <div class="review-slide" id="data-review">
+                <!-- 외부 리뷰 데이터 연동 출력 js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 커뮤니티 -->
+      <section class="community">
+        <div class="container clearfix">
+          <!-- 커뮤니티 공지사항 -->
+          <div class="community-notice community-line">
+            <dl class="clearfix">
+              <dt>
+                <button class="community-bt community-bt-active">공지사항</button>
+              </dt>
+              <dd class="community-visible-active">
+                <ul class="notice-list" id="data-notice">
+                  <!-- 외부 커뮤니티 공지사항 데이터 연동 출력 js -->
+                </ul>
+              </dd>
+              <dt>
+                <button class="community-bt">물품소식</button>
+              </dt>
+              <dd>
+                <ul class="notice-list" id="data-goodnews">
+                  <!-- 외부 커뮤니티 물품소식 데이터 연동 출력 js -->
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <!-- 커뮤니티 조합원상담실 -->
+          <div class="community-info community-line">
+            <h3>조합원상담실</h3>
+            <a href="tel:1661-0800" class="tel">1661-0800</a>
+            <ul class="community-info-list">
+              <li>
+                <span class="t1">평일</span>
+                <b>오전 9시~오후 6시 (점심시간 12시~1시)</b>
+              </li>
+              <li><span class="t2">주말 및 공휴일 휴무</span></li>
+              <li>
+                <span class="t1">이메일</span>
+                <a href="mailto:">hansalim@hansalim.or.kr</a>
+              </li>
+              <li>
+                <span class="t3">* 매장 구입 물품은 해당 매장 문의</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 커뮤니티 자주묻는 질문-->
+          <div class="community-help">
+            <h3>자주 묻는 질문</h3>
+            <ul class="community-help-list clearfix">
+              <li><a href="#">조합원정보</a></li>
+              <li><a href="#">주문/결제</a></li>
+              <li><a href="#">취소/반품/환불</a></li>
+              <li><a href="#">공급</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">기타</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- 하단 -->
+      <footer class="footer">
+        <div class="family-box">
+          <div class="family">
+            <div class="container">
+              <ul class="family-list">
+                <li>
+                  <p class="family-title">한살림 가족</p>
+                  <ul class="family-area">
+                    <li><a href="#">한살림연합</a></li>
+                    <li>
+                      <a href="#">한살림생산자연합회</a>
+                    </li>
+                    <li>
+                      <a href="#">한살림연합 식생활센터</a>
+                    </li>
+                    <li><a href="#">한살림재단</a></li>
+                    <li><a href="#">한살림펀딩</a></li>
+                    <li><a href="#">한살림연수원</a></li>
+                    <li>
+                      <a href="#">한살림햇빛발전협동조합</a>
+                    </li>
+                    <li>
+                      <a href="#">모심과살림연구소</a>
+                    </li>
+                    <li><a href="#">도서출판한살림</a></li>
+                    <li><a href="#">한살림참여인증</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="family-title">서울/경기</p>
+                  <ul class="family-area">
+                    <li><a href="#">한살림서울</a></li>
+                    <li><a href="#">한살림고양파주</a></li>
+                    <li><a href="#">한살림경기남부</a></li>
+                    <li><a href="#">한살림성남용인</a></li>
+                    <li>
+                      <a href="#">한살림경기서남부</a>
+                    </li>
+                    <li><a href="#">한살림경기동부</a></li>
+                    <li><a href="#">한살림수원</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="family-title">강원/충청</p>
+                  <ul class="family-area">
+                    <li><a href="#">한살림원주</a></li>
+                    <li><a href="#">한살림춘천</a></li>
+                    <li><a href="#">한살림강원영동</a></li>
+                    <li><a href="#">한살림청주</a></li>
+                    <li><a href="#">한살림대전</a></li>
+                    <li><a href="#">한살림천안아산</a></li>
+                    <li><a href="#">한살림충주제천</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="family-title">전라/경상</p>
+                  <ul class="family-area">
+                    <li><a href="#">한살림전북</a></li>
+                    <li><a href="#">한살림광주</a></li>
+                    <li><a href="#">한살림전남남부</a></li>
+                    <li><a href="#">한살림경북북부</a></li>
+                    <li><a href="#">한살림경북서부</a></li>
+                    <li><a href="#">한살림울산</a></li>
+                    <li><a href="#">한살림경남</a></li>
+                    <li><a href="#">한살림대구</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="family-title">경상/제주</p>
+                  <ul class="family-area">
+                    <li><a href="#">한살림부산</a></li>
+                    <li><a href="#">한살림경주</a></li>
+                    <li><a href="#">한살림경북동부</a></li>
+                    <li><a href="#">한살림제주</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="family-close">
+                <span>닫기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-top">
+          <div class="container clearfix">
+              <ul class="footer-menu clearfix">
+                  <li><a href="#">이용약관</a></li>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">한살림소개</a></li>
+                  <li><a href="#">소식지PDF</a></li>
+                  <li><a href="#">주간한살림</a></li>
+                  <li><a href="#">앱다운로드</a></li>
+              </ul>
+              <button class="footer-link">
+                  한살림 가족<span class="blank"></span>
+                  지역한살림
+              </button>
+          </div>
+      </div>
+      <div class="footer-main">
+          <div class="container clearfix">
+              <div class="footer-copy">
+                  <ul class="copy-list">
+                      <li>
+                          <span>상호명 :
+                              한살림소비자생활협동조합연합회</span>
+                          <span>대표자 : 조완석</span>
+                          <span>사업자등록번호 :
+                              <a href="#">126-82-12328</a></span>
+                          <span>통신판매업신고번호 :
+                              <a href="#">
+                                  2014-경기안성-093호</a></span>
+                      </li>
+                      <li>
+                          안성사무소 : 경기 안성시 대덕면 안성대로
+                          1526(보동리 285-3) / 서울사무소 : 서울시
+                          강남구 봉은사로81길 15(삼성동)
+                      </li>
+                      <li>
+                          <span>입점문의 :
+                              <a href="#"> 입점문의하기</a></span>
+                          <span>이메일 :
+                              <a href="mailto:hansalim.or.kr">hansalim@hansalim.or.kr</a></span>
+                      </li>
+                  </ul>
+                  <span class="copy-txt">이곳의 모든 저작권은 한살림에게 있습니다.</span>
+              </div>
+              <div class="footer-sns">
+                  <ul class="sns-list clearfix">
+                      <li><a href="#" class="is"></a></li>
+                      <li><a href="#" class="fb"></a></li>
+                      <li><a href="#" class="nb"></a></li>
+                      <li><a href="#" class="yt"></a></li>
+                      <li><a href="#" class="kk"></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      </footer>
     </div>
   </body>
 </html>

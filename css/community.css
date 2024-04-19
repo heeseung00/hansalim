@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* 커뮤니티 */
+.community {
+  position: relative;
+  display: block;
+}
+.community-notice,
+.community-info,
+.community-help {
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  padding: 0 40px;
+  float: left;
+}
+.community-notice dl {
+  position: relative;
+  display: block;
+}
+.community-notice dl > dt {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  float: left;
+}
+.community-notice dl > dt:nth-child(1) {
+  padding-left: 0;
+}
+.community-notice dl > dt:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 4px;
+  display: block;
+  width: 1px;
+  height: 18px;
+  background-color: #e5e5e5;
+}
+
+.community-bt {
+  position: relative;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 20px;
+  color: #999;
+}
+.community-bt-active {
+  color: #000;
+  font-weight: 700;
+}
+.community-visible-active{
+    display: block !important;
+}
+.notice-list {
+  position: relative;
+  display: block;
+}
+
+.notice-list > li {
+    position: relative;
+    display: block;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.notice-list > li > a {
+    position: relative;
+    display: block;
+    font-size: 13px;
+}
+
+.notice-list > li > a > span {
+    position: relative;
+    display: inline-block;
+    /* 말줄임 */
+    width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice-list > li > a > em {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 240px);
+    color: #999;
+    font-style: normal;
+    text-align: right;
+    vertical-align: 2px;
+}
+
+.community-info h3 {
+    position: relative;
+    display: block;
+    color: #672121;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.community-notice >dl > dd{
+    position: absolute;
+    left: 0;
+    top: 50px;
+width: 100%;
+display: none;
+}
+.tel {
+    position: relative;
+    display: block;
+    font-size: 32px;
+    color: #76bd42;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.community-info-list {
+    position: relative;
+    display: block;
+}
+
+.community-info-list li {
+    position: relative;
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.t1 {
+    color: #666;
+}
+
+.t2 {
+    color: #000;
+}
+
+.t3 {
+    color: #000;
+}
+
+.community-info-list > li > a {
+    font-weight: 700;
+}
+
+.community-info-list > li > b {
+    font-weight: 700;
+}
+
+.community-help {
+    position: relative;
+    display: block;
+    width: calc(100% / 3);
+    padding: 0 40px;
+    float: right;
+}
+
+.community-help h3 {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.community-help-list {
+    position: relative;
+    display: block;
+}
+
+.community-help-list > li {
+    position: relative;
+    display: block;
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    /* background-color: #ececec; */
+}
+
+.community-help-list > li:nth-child(2n + 1) {
+    float: left;
+}
+
+.community-help-list > li:nth-child(2n) {
+    float: right;
+}
+
+.community-help-list > li > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    padding: 0 12px;
+    line-height: 36px;
+    font-size: 13px;
+    color: #333;
+}
+
+.community-help-list > li > a:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    right: 10px;
+    top: 10px;
+    background: url("../images/icoFaq.png") no-repeat;
+}
+
+.community-line:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1px;
+    height: 190px;
+    background-color: #ddd;
+}

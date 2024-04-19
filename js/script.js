@@ -26,6 +26,9 @@ window.addEventListener("load", function () {
       BRAND_ARR = obj.brandarr;
       BANNER_ARR = obj.bannerarr;
       SEASON_GOOD = obj.seasongood;
+      REVIEW_ARR = obj.review;
+      NOTICE_ARR = obj.notice;
+      GOODNEWS_ARR = obj.goodnews;
       showVisual(); //비주얼을 화면에 배치
       showTodayGood(); //오늘의 물품을 화면에 배치
       showSaleGood(); //알뜰 물품을 화면에 배치
@@ -36,6 +39,9 @@ window.addEventListener("load", function () {
       showBrandArr(); //브랜드관을 화면에 배치
       showBannerArr(); //배너를 화면에 배치
       showSeasonGood(); //제철요리를 화면에 배치
+      showReview(); //리뷰를 화면에 배치
+      showNotice(); //공지사항을 화면에 배치
+      showGoogNews(); //물품소식을 화면에 배치
     }
   };
   //   자료 호출한다.
@@ -75,6 +81,16 @@ window.addEventListener("load", function () {
   // 제철요리
   let SEASON_GOOD;
   let seasonTag = this.document.getElementById("data-season");
+  // 리뷰 화면 출력
+  let REVIEW_ARR;
+  let reviewTag = this.document.getElementById("data-review");
+  // 공지사항
+  let NOTICE_ARR;
+  let noticeTag = this.document.getElementById("data-notice");
+
+  // 물품소식
+  let GOODNEWS_ARR;
+  let goodNewsTag = this.document.getElementById("data-goodnews");
   // 비주얼 화면 출력 기능
   function showVisual() {
     let html = "";
@@ -605,6 +621,130 @@ ${priceToString(item.price)}<em>원</em>
     } else {
       chkAll.checked = false; //전체 선택 버튼도 해제 상태로 변경
     }
+  }
+
+  // 리뷰 화면 출력
+  function showReview() {
+    let html = `
+    <div class="swiper sw-review">
+    <div class="swiper-wrapper">
+    `;
+    // 데이터처리
+    REVIEW_ARR.forEach(function (item) {
+      // console.log(item);
+      const tag = `
+<div class="swiper-slide">
+<div class="review-box">
+    <a href="${item.link}">
+        <div class= "review-box-desc">
+            <span class= " review-box-title">
+                ${item.title}
+            </span>
+            <span class="review-box-star"> ${item.star} </span>
+            <span class="review-box-img">
+                <img src="images/${item.pic}" alt="${item.title}"/>
+            </span>
+        </div>
+        <p class="review-box-txt">
+            ${item.txt}
+        </p>
+        <span class="review-box-user">${item.user} (${item.shop})</span>
+    </a>
+</div>
+</div>
+`;
+      html += tag;
+    });
+
+    html += `
+    </div>
+    </div>
+    `;
+    reviewTag.innerHTML = html;
+    const swReview = new Swiper(".sw-review", {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      slidesPerGroup: 3,
+      navigation: {
+        prevEl: ".review .slide-prev",
+        nextEl: ".review .slide-next",
+      },
+      pagination: {
+        el: ".review .slide-pg",
+        type: "fraction",
+      },
+    });
+  }
+  //공지사항을 화면에 배치
+  function showNotice() {
+    let html = "";
+    // 데이터를 갱신
+    NOTICE_ARR.forEach(function (item) {
+      // console.log(item);
+      const tag = `
+<li>
+            <a href="${item.link}">
+                <span>
+                    ${item.title}
+                </span><em>${item.date}</em>
+            </a>
+        </li>
+`;
+      html += tag;
+    });
+    noticeTag.innerHTML = html;
+  }
+  //물품소식을 화면에 배치
+  function showGoogNews() {
+    let html = "";
+    // 데이터를 갱신
+    GOODNEWS_ARR.forEach(function (item) {
+      // console.log(item);
+      const tag = `
+<li>
+            <a href="${item.link}">
+                <span>
+                    ${item.title}
+                </span><em>${item.date}</em>
+            </a>
+        </li>
+`;
+      html += tag;
+    });
+    goodNewsTag.innerHTML = html;
+  }
+  // 커뮤니티 탭메뉴
+  // 탭버튼
+  const tabBtArr = this.document.querySelectorAll(".community-bt")
+  // 탭내용
+  const tabConArr= this.document.querySelectorAll(".community-notice dd")
+  // 탭포커스
+  let tabFocusIndex = 0;
+  // 탭 버튼 클릭처리 기능
+  tabBtArr.forEach(function(item, index){
+    // console.log(item, index);
+    item.addEventListener("click",function(){
+      // console.log(item ,index);
+      tabFocusIndex = index;
+      
+      tabFocusFn()
+    })
+  })
+  // 탭포커스가 클릭됐을때 보여지는 함수 생성
+  function tabFocusFn(){
+    tabBtArr.forEach(function(item){
+      item.classList.remove("community-bt-active")
+    })
+    // 인덱스에 해당하는 것만 적용
+    tabBtArr[tabFocusIndex].classList.add("community-bt-active")
+    // 아에 없다가 클릭했을대 생성되게 함
+    // 내용도 일단 모두 제거한다.
+    tabConArr.forEach(function(item){
+      // console.log(item);
+      item.classList.remove("community-visible-active") 
+
+    })
+    tabConArr[tabFocusIndex].classList.add("community-visible-active")
   }
   //  888888888888888888888888888888888888888888888888888
 });

@@ -123,96 +123,94 @@
   display: block;
   background-color: #f3f9f0;
 }
-.brand .slide-control {
-  margin-top: 25px;
+.brand .slide-control{
+    margin-top: 25px;
 }
-.brand-slide {
-  position: relative;
-  display: block;
+.brand-slide{
+    position: relative;
+    display: block;
 }
-.brand-box {
-  position: relative;
-  display: block;
-  width: 285px;
-  height: 285px;
-  background-color: #fff;
-  padding: 35px 30px;
+.brand-box{
+    position: relative;
+    display: block;
+    width: 285px;
+    height: 285px;
+    background-color: #fff;
+    padding: 35px 30px;
 }
 
 .brand-box a {
-  position: relative;
-  display: block;
-  text-align: center;
+    position: relative;
+    display: block;
+    text-align: center;
 }
 
 .brand-box a img {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .brand-box a p {
-  position: relative;
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-  padding-top: 20px;
-  padding-bottom: 40px;
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 
 .brand-info {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .brand-info > li {
-  position: relative;
-  display: block;
-  width: 50%;
-  border-right: 1px solid #e3e3e3;
-  float: left;
+    position: relative;
+    display: block;
+    width: 50%;
+    border-right: 1px solid #e3e3e3;
+    float: left;
 }
 
 .brand-info > li:last-child {
-  border: 0;
+    border: 0;
 }
 
 .brand-info-title {
-  text-align: center;
-  font-size: 16px;
-  color: #666;
-  margin: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
 }
 
 .brand-info-value {
-  position: relative;
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.brand .section-bt {
-  margin-top: 20px;
+.brand .section-bt{
+    margin-top: 20px;
 }
-
 /* 배너 */
-.banner {
+.banner{
   position: relative;
   display: block;
   padding-bottom: 0;
 }
-
-.banner-slide {
+.banner-slide{
   position: relative;
   display: block;
 }
 
-.banner-slide a {
+.banner-slide a{
   position: relative;
   display: block;
 }
 
 .banner .slide-prev,
-.banner .slide-next {
+.banner .slide-next{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -223,13 +221,14 @@
   border: 0;
   z-index: 9;
 }
-.banner .slide-prev {
+
+.banner .slide-prev{
   background: url("../images/banner_arrow.png") no-repeat;
   background-position: 0 -34px;
   left: 20px;
 }
 
-.banner .slide-next {
+.banner .slide-next{
   right: 20px;
   background: url("../images/banner_arrow.png") no-repeat;
   transform: translateY(-50%) rotateY(180deg);
@@ -237,6 +236,6 @@
 }
 
 .banner .slide-prev:hover,
-.banner .slide-next:hover {
+.banner .slide-next:hover{
   background-position: 0 0;
 }

@@ -53,6 +53,8 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
+/* 고정메뉴 */
+
 .wrap > section {
   padding: 80px 0;
 }
@@ -62,7 +64,101 @@ body {
   padding-top: 128px;
   transition: padding-top 0.2s;
 }
-.all-menu-cate::-webkit-scrollbar{
+.fix-menu{
+  position: fixed;
+  right: 0;
+  top: 175px;
+  display: block;
+  width: 85px;
+  z-index: 99999;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 10%);
+  padding: 15px 10px 29px 10px;
+  overflow: hidden;
+}
+
+.fix-list{
+  position: relative;
+  display: block;
+}
+
+.fix-list > li{
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.fix-list > li > a{
+  position: relative;
+  display: block;
+}
+
+.fix-list > li > a::after{
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  background: url("../images/icoFloating.png") no-repeat;
+}
+
+.fix-list > li span{
+  position: relative;
+  display: block;
+}
+
+.fix-login::after{
+  background-position: 0 0;
+}
+
+.fix-shop::after{
+  background-position: 0 -32px !important;
+}
+
+.good-recent{
+  display: inline-block !important;
+  width: 50px !important;
+  height: 50px !important;
+  overflow: hidden;
+}
+
+.good-recent img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.fix-qa::after{
+  background-position: 0 calc(-32px * 2) !important;
+}
+
+.fix-talk::after{
+  background-position: 0 calc(-32px * 3) !important;
+}
+
+.fix-top{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  line-height: 29px;
+  border: 0;
+  cursor: pointer;
+  font-size: 11px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+/* .all-menu-cate::-webkit-scrollbar{
     width: 10px;
 }
 
@@ -75,12 +171,12 @@ body {
 
 .all-menu-cate::-webkit-scrollbar-track{
     background-color: transparent;
-}
+} */
 /* section 공동 페이아웃 */
 .wrap > section {
   padding: 80px 0;
 }
-.section-title{
+.section-title {
   position: relative;
   display: block;
   font-size: 32px;
@@ -89,13 +185,13 @@ body {
   font-weight: 400;
   margin-bottom: 20px;
 }
-.section-title b{
+.section-title b {
   font-weight: 700;
 }
-.section-bar{
+.section-bar {
   padding-bottom: 15px;
 }
-.section-bar::after{
+.section-bar::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -105,13 +201,13 @@ body {
   height: 2px;
 }
 
-.section-title-txt{
+.section-title-txt {
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
 
-.section-bt{
+.section-bt {
   position: relative;
   display: block;
   width: 114px;
@@ -125,12 +221,15 @@ body {
   transition: background 0.5s;
 }
 
-.section-bt:hover{
+.section-bt:hover {
   background: #f9f9f9;
 }
 /* swiper */
-
-.slide-control{
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+.slide-control {
   position: relative;
   display: block;
   width: 140px;
@@ -138,7 +237,7 @@ body {
 }
 
 .slide-prev,
-.slide-next{
+.slide-next {
   position: absolute;
   top: 0;
   width: 25px;
@@ -149,25 +248,25 @@ body {
   background: transparent;
 }
 
-.slide-prev{
+.slide-prev {
   background: url("../images/swiperArrP.png") no-repeat;
   left: 0;
 }
 
-.slide-prev:hover{
+.slide-prev:hover {
   background-position: 0px -20px;
 }
 
-.slide-next{
+.slide-next {
   right: 0;
   background: url("../images/swiperArrN.png") no-repeat;
 }
 
-.slide-next:hover{
+.slide-next:hover {
   background-position: 0px -20px;
 }
 
-.slide-pg{
+.slide-pg {
   position: relative;
   display: block;
   text-align: center;
@@ -175,26 +274,26 @@ body {
 }
 
 /* 섹션 레이아웃 */
-.layout-wrap{
+.layout-wrap {
   position: relative;
   display: block;
 }
 
-.layout-left{
+.layout-left {
   position: relative;
   display: block;
   width: calc(100% - 900px);
   float: left;
 }
 
-.layout-right{
+.layout-right {
   position: relative;
   display: block;
   width: 900px;
   float: right;
 }
 
-.good-slide{
+.good-slide {
   position: relative;
   display: block;
 }
